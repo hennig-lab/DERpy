@@ -1,0 +1,11 @@
+Python adaptation of hennig-lab/DER, revision a44e98329c2abed47ede9e2328aa466134bf48e0.
+Upstream: https://github.com/hennig-lab/DER
+
+Original DER v1.0 (February 2021): Copyright 2021 Gert Dehnen, Marcel S. Kehl,
+Florian Mormann, and the University of Bonn Medical Center.
+Blackrock support / v1.1 (October 2025): Jay Hennig.
+
+Python adaptation: October 2026. Distributed under the Mozilla Public License 2.0.
+Wavelet feature selection and the KS helper follow der_wavedec/der_test_ks,
+themselves adapted upstream from Wave_clus 3 (Chaure et al., J Neurophysiol. 2018).
+See https://github.com/csn-le/wave_clus for the upstream Wave_clus project.

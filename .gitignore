@@ -1,0 +1,33 @@
+.DS_Store
+*.json
+
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Local recording data
+*.mat
+
+# Generated reports and output
+agreement*.json
+der-validation.json
+full-session-validation.json
+central-z.png
+python-output/
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/

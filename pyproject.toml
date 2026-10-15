@@ -1,0 +1,43 @@
+[project]
+name = "der-blackrock"
+version = "0.1.4"
+description = "Duplicate Event Removal for Blackrock Wave_clus recordings"
+readme = "README.md"
+license = "MPL-2.0"
+requires-python = ">=3.11"
+dependencies = [
+    "numba>=0.68.0",
+    "numpy>=2.4.6",
+    "scipy>=1.17.1",
+    "tqdm>=4.70.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+der = "der.cli:main"
+
+[project.optional-dependencies]
+plots = ["matplotlib>=3.9"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/der"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/README.md", "/VALIDATION.md", "/validation", "/LICENSE", "/NOTICE", "/CITATION.cff", "/pyproject.toml", "/pytest.ini", "/uv.lock"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: requires external real recording files"]
+
+[tool.ruff]
+line-length = 110
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pywavelets>=1.9.0",
+    "ruff>=0.17.1",
+]
